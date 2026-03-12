@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Task Manager 🚀
 
-## Getting Started
+Une application web de gestion de tâches et de projets, construite avec **Next.js** (frontend) et **FastAPI** (backend).
 
-First, run the development server:
+## 🌐 Accès en ligne
+
+👉 **[https://task-manager-frontend-drab-six.vercel.app/login](https://task-manager-frontend-drab-six.vercel.app/login)**
+
+> ⚠️ Le backend est hébergé sur Render (plan gratuit). Si la première requête est lente (~30s), c'est normal — le serveur se réveille.
+
+---
+
+## ✨ Fonctionnalités
+
+- Inscription et connexion sécurisée (JWT)
+- Création et gestion de projets
+- Création et gestion de tâches par projet
+- Interface responsive
+
+---
+
+## 🛠️ Stack technique
+
+| Couche | Technologie |
+|--------|-------------|
+| Frontend | Next.js, TypeScript, Tailwind CSS |
+| Backend | FastAPI (Python) |
+| Base de données | MongoDB Atlas |
+| Déploiement Frontend | Vercel |
+| Déploiement Backend | Render |
+
+---
+
+## 🚀 Lancer le projet en local
+
+### Frontend
 
 ```bash
+git clone https://github.com/ton-repo/task-manager-frontend
+cd task-manager-frontend
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvre [http://localhost:3000](http://localhost:3000) dans ton navigateur.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Variables d'environnement
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Crée un fichier `.env.local` à la racine du frontend :
 
-## Learn More
+```env
+NEXT_PUBLIC_API_URL=http://localhost:8000
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Backend
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+git clone https://github.com/ton-repo/task-manager-backend
+cd task-manager-backend
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Crée un fichier `.env` à la racine du backend :
 
-## Deploy on Vercel
+```env
+MONGO_URL=ta_chaine_mongodb
+DB_NAME=task_manager
+SECRET_KEY=ta_cle_secrete
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📁 Structure du projet
+
+```
+task-manager-frontend/
+├── app/
+│   ├── login/
+│   ├── register/
+│   ├── dashboard/
+│   └── ...
+├── components/
+├── public/
+└── ...
+```
+
+---
+
+## 👤 Auteur
+
+Développé par **Papa Mapate Loum**
